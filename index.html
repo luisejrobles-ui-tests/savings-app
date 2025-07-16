@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savings App - Spending Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 16px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        select, input, textarea {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .amount-input {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .amount-input input {
+            flex: 1;
+        }
+        
+        .currency-toggle {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+        
+        .currency-toggle:hover {
+            background: #0056b3;
+        }
+        
+        .add-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        
+        .add-btn:hover {
+            background: #218838;
+        }
+        
+        .add-btn:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+        
+        .spending-header {
+            margin-bottom: 20px;
+        }
+        
+        .filter-section {
+            margin-top: 16px;
+            padding: 16px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .filter-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .filter-controls label {
+            margin-bottom: 0;
+            white-space: nowrap;
+        }
+        
+        .filter-select {
+            min-width: 150px;
+            margin-bottom: 0;
+        }
+        
+        .total-display {
+            text-align: right;
+            color: #495057;
+            font-size: 16px;
+        }
+        
+        .spending-item {
+            border: 1px solid #eee;
+            border-radius: 4px;
+            padding: 16px;
+            margin-bottom: 12px;
+            background: #fafafa;
+        }
+        
+        .spending-category {
+            font-weight: 600;
+            color: #007bff;
+            margin-bottom: 4px;
+        }
+        
+        .spending-amount {
+            font-size: 18px;
+            font-weight: 700;
+            color: #28a745;
+            margin-bottom: 4px;
+        }
+        
+        .spending-note {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .empty-state {
+            text-align: center;
+            color: #666;
+            padding: 40px;
+        }
+        
+        .char-count {
+            font-size: 12px;
+            color: #666;
+            text-align: right;
+            margin-top: 4px;
+        }
+        
+        .char-count.warning {
+            color: #dc3545;
+        }
+        
+        @media (max-width: 600px) {
+            .filter-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .filter-select {
+                min-width: auto;
+            }
+            
+            .total-display {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+</html> 
