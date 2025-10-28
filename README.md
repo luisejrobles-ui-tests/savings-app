@@ -1,5 +1,4 @@
 # Savings App - Spending Tracker
-test
 
 A minimalistic React web application for tracking your spending with categories, amounts, and notes.
 
